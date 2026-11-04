@@ -16,16 +16,16 @@
       "settings": {
         "text": "Sign up and get 20% off to your first order.",
         "link_text": "Sign Up Now",
-        "link_url": "",
+        "link_url": "#",
         "show_close_button": true,
         "background_color": "#000000",
-        "text_color": "#FFFFFF"
+        "text_color": "#ffffff"
       }
     },
     "header": {
       "type": "header",
       "settings": {
-        "menu": "main-menu",
+        "menu": "menu-amit",
         "enable_sticky_header": true,
         "search_placeholder": "Search for products..."
       }

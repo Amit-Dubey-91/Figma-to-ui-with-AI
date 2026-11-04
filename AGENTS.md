@@ -66,6 +66,10 @@ page.
 -   Use semantic HTML5.
 -   Use plain CSS; do not introduce a CSS framework unless the user
     explicitly requests it.
+-   Favor modern layout primitives (CSS flexbox, grid, and gap) to
+    control spacing between elements. Keep margins and paddings minimal,
+    reserving padding for structural container gutters and interactive
+    touch targets. Avoid stacking margins between sibling elements.
 -   Use vanilla JavaScript. Do not add jQuery or other dependencies
     unless the existing theme already requires them and there is a clear
     reason.
