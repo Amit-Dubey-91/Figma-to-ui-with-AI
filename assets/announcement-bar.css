@@ -45,7 +45,6 @@
   font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 3px;
-  margin-left: 4px;
   transition: opacity 0.2s ease;
   display: inline;
 }
