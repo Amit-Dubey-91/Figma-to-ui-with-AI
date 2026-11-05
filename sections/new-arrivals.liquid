@@ -1,0 +1,176 @@
+{{ 'new-arrivals.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'new-arrivals.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  #NewArrivals-{{ section.id }} {
+    --new-arrivals-padding-top: {{ section.settings.padding_top }}px;
+    --new-arrivals-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+{%- assign selected_collection = section.settings.collection -%}
+{%- assign collection_products = selected_collection.products -%}
+{%- assign product_limit = section.settings.products_to_show | default: 4 -%}
+
+{%- if selected_collection != blank and collection_products.size > 0 -%}
+  <section
+    id="NewArrivals-{{ section.id }}"
+    class="new-arrivals{% if section.settings.show_bottom_border %} new-arrivals--has-border{% endif %}"
+    aria-labelledby="NewArrivalsHeading-{{ section.id }}"
+  >
+    <div class="page-container new-arrivals__container">
+      {%- if section.settings.heading != blank -%}
+        <h2 id="NewArrivalsHeading-{{ section.id }}" class="new-arrivals__title">
+          {{ section.settings.heading | escape }}
+        </h2>
+      {%- endif -%}
+
+      {% render 'product-grid',
+        products: collection_products,
+        limit: product_limit,
+        columns_desktop: section.settings.columns_desktop,
+        columns_mobile: section.settings.columns_mobile
+      %}
+
+      {%- if section.settings.show_view_all -%}
+        <div class="new-arrivals__view-all-container">
+          <a
+            href="{{ selected_collection.url }}"
+            class="btn b-secondary new-arrivals__view-all"
+          >
+            {{ section.settings.view_all_label | default: 'View All' | escape }}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </section>
+{%- elsif request.design_mode -%}
+  <section
+    id="NewArrivals-{{ section.id }}"
+    class="new-arrivals new-arrivals--empty"
+    aria-labelledby="NewArrivalsHeading-{{ section.id }}"
+  >
+    <div class="page-container new-arrivals__container" style="text-align: center; padding-block: 60px;">
+      {%- if section.settings.heading != blank -%}
+        <h2 id="NewArrivalsHeading-{{ section.id }}" class="new-arrivals__title" style="margin-bottom: 16px;">
+          {{ section.settings.heading | escape }}
+        </h2>
+      {%- endif -%}
+
+      {%- if selected_collection == blank -%}
+        <p style="color: rgba(0, 0, 0, 0.6); font-family: var(--font-body, 'Satoshi', sans-serif); font-size: 16px; margin: 0;">
+          No collection selected. Please select a collection in the section settings.
+        </p>
+      {%- else -%}
+        <p style="color: rgba(0, 0, 0, 0.6); font-family: var(--font-body, 'Satoshi', sans-serif); font-size: 16px; margin: 0 0 8px 0;">
+          The collection <strong>&ldquo;{{ selected_collection.title }}&rdquo;</strong> currently has 0 active products.
+        </p>
+        <p style="color: rgba(0, 0, 0, 0.4); font-family: var(--font-body, 'Satoshi', sans-serif); font-size: 14px; margin: 0;">
+          In your Shopify Admin &rarr; Products, ensure products are set to <strong>Active</strong> and published to the <strong>Online Store</strong> sales channel.
+        </p>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "New arrivals",
+  "tag": "section",
+  "class": "section-new-arrivals",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "NEW ARRIVALS"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Maximum products to show"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "default": "2",
+      "label": "Number of columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "Enable \"View All\" button"
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "default": "View All",
+      "label": "\"View All\" button label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_border",
+      "default": true,
+      "label": "Show bottom border divider"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 64
+    }
+  ],
+  "presets": [
+    {
+      "name": "New arrivals"
+    }
+  ]
+}
+{% endschema %}

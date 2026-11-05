@@ -5,6 +5,7 @@
     
     <!-- Left Column: Content & Metrics -->
     <div class="hero-section__content">
+      <!-- Container 1: Heading, Paragraph, and Button -->
       <div class="hero-section__text-group">
         <h1 id="HeroHeading-{{ section.id }}" class="hero-section__heading">
           {{ section.settings.heading | escape }}
@@ -15,20 +16,20 @@
             {{ section.settings.description | escape }}
           </p>
         {%- endif -%}
+
+        {%- if section.settings.button_label != blank -%}
+          <div class="hero-section__button-wrapper">
+            <a
+              href="{{ section.settings.button_link | default: routes.all_products_collection_url }}"
+              class="btn b-primary hero-section__button"
+            >
+              {{ section.settings.button_label | escape }}
+            </a>
+          </div>
+        {%- endif -%}
       </div>
 
-      {%- if section.settings.button_label != blank -%}
-        <div class="hero-section__button-wrapper">
-          <a
-            href="{{ section.settings.button_link | default: routes.all_products_collection_url }}"
-            class="btn b-primary hero-section__button"
-          >
-            {{ section.settings.button_label | escape }}
-          </a>
-        </div>
-      {%- endif -%}
-
-      <!-- Metrics Row -->
+      <!-- Container 2: Metrics Row -->
       <div class="hero-section__metrics">
         {%- if section.settings.metric_1_number != blank -%}
           <div class="hero-section__metric-item">

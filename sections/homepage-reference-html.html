@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Announcement Bar</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="announcement-bar" id="announcement-bar" aria-label="Announcement">
+            <div class="container announcement-bar__container">
+                <p class="announcement-bar__text">
+                    Sign up and get 20% off to your first order.
+                    <a href="#" class="announcement-bar__link">Sign Up Now</a>
+                </p>
+                <button class="announcement-bar__close" id="close-announcement" aria-label="Close announcement">
+        
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.8532 11.5274C13.0293 11.7035 13.1283 11.9424 13.1283 12.1915C13.1283 12.4405 13.0293 12.6794 12.8532 12.8555C12.6771 13.0317 12.4382 13.1306 12.1891 13.1306C11.9401 13.1306 11.7012 13.0317 11.5251 12.8555L6.56491 7.89381L1.60319 12.854C1.42707 13.0301 1.1882 13.129 0.939126 13.129C0.690054 13.129 0.451184 13.0301 0.275064 12.854C0.0989435 12.6778 3.71146e-09 12.439 0 12.1899C-3.71146e-09 11.9408 0.0989435 11.702 0.275064 11.5258L5.23678 6.56569L0.276626 1.60397C0.100506 1.42785 0.00156253 1.18898 0.00156254 0.939907C0.00156254 0.690836 0.100506 0.451965 0.276626 0.275845C0.452746 0.0997246 0.691617 0.000781121 0.940688 0.000781119C1.18976 0.000781116 1.42863 0.0997246 1.60475 0.275845L6.56491 5.23756L11.5266 0.275063C11.7027 0.0989432 11.9416 -4.14954e-09 12.1907 0C12.4398 4.14954e-09 12.6786 0.0989432 12.8547 0.275063C13.0309 0.451184 13.1298 0.690054 13.1298 0.939126C13.1298 1.1882 13.0309 1.42707 12.8547 1.60319L7.89303 6.56569L12.8532 11.5274Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="site-header">
+            <div class="container site-header__container">
+                <button class="site-header__menu-btn" aria-label="Open Menu">
+                    <img src="assets/images/hambburgor-icon.png" alt="" class="site-header__menu-icon" width="24" height="24" aria-hidden="true">
+                </button>
+    
+                <a href="/" class="site-header__logo">
+                    <img src="assets/images/SHOP.CO.png" alt="SHOP.CO" class="site-header__logo-img" width="160" height="22">
+                </a>
+    
+                <nav class="site-header__nav" aria-label="Primary Navigation">
+                    <ul class="site-header__nav-list">
+                        <li class="site-header__nav-item">
+                            <a href="#" class="site-header__nav-link site-header__nav-link--dropdown">
+                                Shop
+                                <img src="assets/images/drop-down-icon.png" alt="" class="site-header__chevron" width="12" height="12" aria-hidden="true">
+                            </a>
+                        </li>
+                        <li class="site-header__nav-item"><a href="#" class="site-header__nav-link">On Sale</a></li>
+                        <li class="site-header__nav-item"><a href="#" class="site-header__nav-link">New Arrivals</a></li>
+                        <li class="site-header__nav-item"><a href="#" class="site-header__nav-link">Brands</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="site-header__search">
+                    <img src="assets/images/search-icon.png" alt="" class="site-header__search-icon" width="24" height="24" aria-hidden="true">
+                    <input type="search" class="site-header__search-input" placeholder="Search for products..." aria-label="Search for products">
+                </div>
+    
+                <div class="site-header__actions">
+                    <button class="site-header__action-btn site-header__action-btn--search" aria-label="Search">
+                        <img src="assets/images/mobile-search-icon.png" alt="" class="site-header__action-img" width="24" height="24" aria-hidden="true">
+                    </button>
+                    <a href="#" class="site-header__action-btn site-header__action-btn--cart" aria-label="View Cart">
+                        <img src="assets/images/cart-icon.png" alt="" class="site-header__action-img" width="24" height="24" aria-hidden="true">
+                    </a>
+                    <a href="#" class="site-header__action-btn site-header__action-btn--profile" aria-label="View Profile">
+                        <img src="assets/images/accout-logo.png" alt="" class="site-header__action-img" width="24" height="24" aria-hidden="true">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <div class="hero__body">
+                    <h1 class="hero__title">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+                    <p class="hero__description">
+                        Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+                    </p>
+                    <a href="#" class="primary-button hero__cta">Shop Now</a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat-item">
+                        <div class="hero__stat-inner">
+                            <span class="hero__stat-number">200+</span>
+                            <span class="hero__stat-label">International Brands</span>
+                        </div>
+                    </div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat-item">
+                        <div class="hero__stat-inner">
+                            <span class="hero__stat-number">2,000+</span>
+                            <span class="hero__stat-label">High-Quality Products</span>
+                        </div>
+                    </div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat-item">
+                        <div class="hero__stat-inner">
+                            <span class="hero__stat-number">30,000+</span>
+                            <span class="hero__stat-label">Happy Customers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__image-container">
+                <img src="assets/images/herobannermob.png" alt="Fashion Models" class="hero__image">
+                <img src="assets/images/gemini-icon.png" alt="" class="hero__star hero__star--large" aria-hidden="true">
+                <img src="assets/images/gemini-icon.png" alt="" class="hero__star hero__star--small" aria-hidden="true">
+            </div> 
+        </div>
+        </section>
+
+    <section class="brands-bar">
+        <div class="container brands-bar__container">
+            <img src="assets/images/vercase.png" alt="Versace" class="brands-bar__logo">
+            <img src="assets/images/zara.png" alt="Zara" class="brands-bar__logo">
+            <img src="assets/images/gucci-logo-1 1.png" alt="Gucci" class="brands-bar__logo">
+            <img src="assets/images/prada-logo-1 1.png" alt="Prada" class="brands-bar__logo">
+            <img src="assets/images/ck-logo.png" alt="Calvin Klein" class="brands-bar__logo">
+        </div>
+    </section>
+    
+    <section class="new-arrivals" id="new-arrivals">
+        <div class="container">
+            <h2 class="new-arrivals__title">NEW ARRIVALS</h2>
+            <div class="new-arrivals__grid">
+                <!-- Product 1 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/shirt-black.png" alt="T-shirt with Tape Details" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">T-shirt with Tape Details</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 4 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 5 (Half) -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="half-star-1">
+                                        <stop offset="50%" stop-color="#FFC700"/>
+                                        <stop offset="50%" stop-color="#E5E5E5"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="url(#half-star-1)"/>
+                            </svg>
+                        </div>
+                        <span class="product-card__rating-val">4.5/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$120</span>
+                    </div>
+                </a>
+
+                <!-- Product 2 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/jeans-blue.png" alt="Skinny Fit Jeans" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">Skinny Fit Jeans</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 4 (Half) -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="half-star-2">
+                                        <stop offset="50%" stop-color="#FFC700"/>
+                                        <stop offset="50%" stop-color="#E5E5E5"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="url(#half-star-2)"/>
+                            </svg>
+                        </div>
+                        <span class="product-card__rating-val">3.5/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$240</span>
+                        <span class="product-card__price-old">$260</span>
+                        <span class="product-card__discount-badge">-20%</span>
+                    </div>
+                </a>
+
+                <!-- Product 3 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/checked-shirt.png" alt="Checkered Shirt" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">Checkered Shirt</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 4 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 5 (Half) -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="half-star-3">
+                                        <stop offset="50%" stop-color="#FFC700"/>
+                                        <stop offset="50%" stop-color="#E5E5E5"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="url(#half-star-3)"/>
+                            </svg>
+                        </div>
+                        <span class="product-card__rating-val">4.5/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$180</span>
+                    </div>
+                </a>
+
+                <!-- Product 4 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/red-tshirt.png" alt="Sleeve Striped T-shirt" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">Sleeve Striped T-shirt</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 4 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 5 (Half) -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="half-star-4">
+                                        <stop offset="50%" stop-color="#FFC700"/>
+                                        <stop offset="50%" stop-color="#E5E5E5"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="url(#half-star-4)"/>
+                            </svg>
+                        </div>
+                        <span class="product-card__rating-val">4.5/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$130</span>
+                        <span class="product-card__price-old">$160</span>
+                        <span class="product-card__discount-badge">-30%</span>
+                    </div>
+                </a>
+            </div>
+            <div class="new-arrivals__view-all-container">
+                <a href="#" class="secondary-button new-arrivals__view-all">View All</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="top-selling">
+        <div class="container">
+            <h2 class="top-selling__title">TOP SELLING</h2>
+            <div class="top-selling__grid">
+                <!-- Product 1 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/green-shirt.png" alt="Vertical Striped Shirt" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">Vertical Striped Shirt</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 4 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 5 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                        </div>
+                        <span class="product-card__rating-val">5.0/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$212</span>
+                        <span class="product-card__price-old">$235</span>
+                        <span class="product-card__discount-badge">-20%</span>
+                    </div>
+                </a>
+
+                <!-- Product 2 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/red-top-tshirt.png" alt="Courage Graphic T-shirt" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">Courage Graphic T-shirt</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 4 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                        </div>
+                        <span class="product-card__rating-val">4.0/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$145</span>
+                    </div>
+                </a>
+
+                <!-- Product 3 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/shorts.png" alt="Loose Fit Bermuda Shorts" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">Loose Fit Bermuda Shorts</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                        </div>
+                        <span class="product-card__rating-val">3.0/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$80</span>
+                    </div>
+                </a>
+
+                <!-- Product 4 -->
+                <a href="product.html" class="product-card">
+                    <div class="product-card__image-container">
+                        <img src="assets/images/black-jeans.png" alt="Faded Skinny Jeans" class="product-card__image">
+                    </div>
+                    <h3 class="product-card__title">Faded Skinny Jeans</h3>
+                    <div class="product-card__rating">
+                        <div class="product-card__stars">
+                            <!-- Star 1 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 2 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 3 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 4 -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC700"/></svg>
+                            <!-- Star 5 (Half) -->
+                            <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="half-star-top-selling-4">
+                                        <stop offset="50%" stop-color="#FFC700"/>
+                                        <stop offset="50%" stop-color="#E5E5E5"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="url(#half-star-top-selling-4)"/>
+                            </svg>
+                        </div>
+                        <span class="product-card__rating-val">4.5/<span class="product-card__rating-scale">5</span></span>
+                    </div>
+                    <div class="product-card__price-container">
+                        <span class="product-card__price">$210</span>
+                    </div>
+                </a>
+            </div>
+            <div class="top-selling__view-all-container">
+                <a href="#" class="secondary-button top-selling__view-all">View All</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="browse-styles" id="browse-styles">
+        <div class="container">
+            <div class="browse-styles__wrapper">
+                <h2 class="browse-styles__title">BROWSE BY DRESS STYLE</h2>
+                <div class="browse-styles__grid">
+                    <a href="#" class="browse-styles__card browse-styles__card--casual">
+                        <h3 class="browse-styles__card-title">Casual</h3>
+                    </a>
+                    <a href="#" class="browse-styles__card browse-styles__card--formal">
+                        <h3 class="browse-styles__card-title">Formal</h3>
+                    </a>
+                    <a href="#" class="browse-styles__card browse-styles__card--party">
+                        <h3 class="browse-styles__card-title">Party</h3>
+                    </a>
+                    <a href="#" class="browse-styles__card browse-styles__card--gym">
+                        <h3 class="browse-styles__card-title">Gym</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials__header">
+                <h2 class="testimonials__title">OUR HAPPY CUSTOMERS</h2>
+                <div class="testimonials__nav">
+                    <button class="testimonials__nav-btn" id="testimonial-prev" aria-label="Previous testimonials">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
+                    <button class="testimonials__nav-btn" id="testimonial-next" aria-label="Next testimonials">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="testimonials__grid-wrapper">
+                <div class="testimonials__grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__stars">
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                        </div>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Sarah M.</span>
+                            <svg class="testimonials__verified" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#01AB31"/>
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text">
+                            "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__stars">
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                        </div>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Alex K.</span>
+                            <svg class="testimonials__verified" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#01AB31"/>
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text">
+                            "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__stars">
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                        </div>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">James L.</span>
+                            <svg class="testimonials__verified" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#01AB31"/>
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text">
+                            "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__stars">
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                        </div>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Monica R.</span>
+                            <svg class="testimonials__verified" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#01AB31"/>
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text">
+                            "The customer service was friendly, and the shipping was fast. The fabric feels premium, and it fits perfectly! I will definitely be ordering more soon."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonials__card">
+                        <div class="testimonials__stars">
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                            <svg class="testimonials__star" width="22" height="22" viewBox="0 0 24 24" fill="#FFC700"><path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+                        </div>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Emma T.</span>
+                            <svg class="testimonials__verified" width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#01AB31"/>
+                                <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p class="testimonials__text">
+                            "I love the clean design and the modern fits. Everything is exactly as shown on the website. A premium shopping experience indeed!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Newsletter Card -->
+            <div class="newsletter">
+                <div class="newsletter__content">
+                    <h2 class="newsletter__title">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                </div>
+                <form class="newsletter__form">
+                    <div class="newsletter__input-wrapper">
+                        <svg class="newsletter__input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <input type="email" class="newsletter__input" placeholder="Enter your email address" required aria-label="Email address">
+                    </div>
+                    <button type="submit" class="newsletter__btn">Subscribe to Newsletter</button>
+                </form>
+            </div>
+            
+            <!-- Footer Main Content -->
+            <div class="footer__main">
+                <!-- Column 1: Brand -->
+                <div class="footer__col footer__col--brand">
+                    <a href="/" class="footer__logo">
+                        <img src="assets/images/SHOP.CO.png" alt="SHOP.CO" class="footer__logo-img" width="160" height="22">
+                    </a>
+                    <p class="footer__description">
+                        We have clothes that suits your style and which you're proud to wear. From women to men.
+                    </p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social-link footer__social-link--twitter" aria-label="Twitter">
+                            <img src="assets/images/twitter.png" alt="Twitter" width="20" height="20">
+                        </a>
+                        <a href="#" class="footer__social-link footer__social-link--facebook" aria-label="Facebook">
+                            <img src="assets/images/fb.png" alt="Facebook" width="20" height="20">
+                        </a>
+                        <a href="#" class="footer__social-link footer__social-link--instagram" aria-label="Instagram">
+                            <img src="assets/images/insta.png" alt="Instagram" width="20" height="20">
+                        </a>
+                        <a href="#" class="footer__social-link footer__social-link--github" aria-label="GitHub">
+                            <img src="assets/images/git.png" alt="GitHub" width="20" height="20">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Company -->
+                <div class="footer__col">
+                    <h3 class="footer__col-title">COMPANY</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">About</a></li>
+                        <li><a href="#" class="footer__link">Features</a></li>
+                        <li><a href="#" class="footer__link">Works</a></li>
+                        <li><a href="#" class="footer__link">Career</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Help -->
+                <div class="footer__col">
+                    <h3 class="footer__col-title">HELP</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Customer Support</a></li>
+                        <li><a href="#" class="footer__link">Delivery Details</a></li>
+                        <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: FAQ -->
+                <div class="footer__col">
+                    <h3 class="footer__col-title">FAQ</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Account</a></li>
+                        <li><a href="#" class="footer__link">Manage Deliveries</a></li>
+                        <li><a href="#" class="footer__link">Orders</a></li>
+                        <li><a href="#" class="footer__link">Payments</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Resources -->
+                <div class="footer__col">
+                    <h3 class="footer__col-title">RESOURCES</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Free eBooks</a></li>
+                        <li><a href="#" class="footer__link">Development Tutorial</a></li>
+                        <li><a href="#" class="footer__link">How to - Blog</a></li>
+                        <li><a href="#" class="footer__link">Youtube Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p class="footer__copyright">Shop.co © 2000-2023, All Rights Reserved</p>
+                <div class="footer__payments">
+                    <!-- Visa PNG -->
+                    <div class="footer__payment-card">
+                        <img src="assets/images/Visa (1).png" alt="Visa" width="46" height="30">
+                    </div>
+                    <!-- MasterCard PNG -->
+                    <div class="footer__payment-card">
+                        <img src="assets/images/Mastercard.png" alt="MasterCard" width="46" height="30">
+                    </div>
+                    <!-- PayPal PNG -->
+                    <div class="footer__payment-card">
+                        <img src="assets/images/Paypal (1).png" alt="PayPal" width="46" height="30">
+                    </div>
+                    <!-- Apple Pay PNG -->
+                    <div class="footer__payment-card">
+                        <img src="assets/images/ Pay.png" alt="Apple Pay" width="46" height="30">
+                    </div>
+                    <!-- Google Pay PNG -->
+                    <div class="footer__payment-card">
+                        <img src="assets/images/G Pay.png" alt="Google Pay" width="46" height="30">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

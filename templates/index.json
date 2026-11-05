@@ -11,25 +11,93 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+        "heading": "FIND CLOTHES THAT MATCHES YOUR STYLE",
+        "description": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
+        "button_label": "Shop Now",
+        "button_link": "",
+        "metric_1_number": "200+",
+        "metric_1_label": "International Brands",
+        "metric_2_number": "2,000+",
+        "metric_2_label": "High-Quality Products",
+        "metric_3_number": "30,000+",
+        "metric_3_label": "Happy Customers"
+      }
+    },
+    "brands_banner": {
+      "type": "brands-banner",
+      "blocks": {
+        "brand_versace": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/Group_10.png",
+            "brand_name": "Versace",
+            "link": ""
+          }
+        },
+        "brand_zara": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/zara-logo-1_1_e6f66285-7eb4-4d70-9e1c-5fe3086b4d51.png",
+            "brand_name": "Zara",
+            "link": ""
+          }
+        },
+        "brand_gucci": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/gucci-logo-1_1_1_bc52d279-4789-4103-80b4-b682dcf19197.png",
+            "brand_name": "Gucci",
+            "link": ""
+          }
+        },
+        "brand_prada": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/prada-logo-1_1_1.png",
+            "brand_name": "Prada",
+            "link": ""
+          }
+        },
+        "brand_calvin_klein": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/Group_11_da35c976-a874-4937-beb2-a4e4bf6525e0.png",
+            "brand_name": "Calvin Klein",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_versace",
+        "brand_zara",
+        "brand_gucci",
+        "brand_prada",
+        "brand_calvin_klein"
+      ],
+      "settings": {
+        "background_color": "#000000",
+        "accessibility_label": "Featured Brands",
+        "padding_top": 42,
+        "padding_bottom": 42
+      }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -37,13 +105,30 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
+      }
+    },
+    "new_arrivals": {
+      "type": "new-arrivals",
+      "settings": {
+        "heading": "NEW ARRIVALS",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "show_view_all": true,
+        "view_all_label": "View All",
+        "show_bottom_border": true,
+        "padding_top": 72,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
     "hero",
-    "featured_collection"
+    "brands_banner",
+    "featured_collection",
+    "new_arrivals"
   ]
 }

@@ -1,0 +1,94 @@
+{% comment %}
+  Reusable Product Card Snippet
+  Usage:
+    {% render 'product-card', product: product %}
+{% endcomment %}
+
+{%- if product != blank -%}
+  {%- assign card_url = product.url -%}
+  {%- assign card_title = product.title -%}
+  {%- assign card_image = product.featured_media | default: product.featured_image -%}
+  {%- assign card_price = product.price -%}
+  {%- assign card_compare_price = product.compare_at_price -%}
+  
+  {%- comment -%} Rating calculation from metafields or default display {%- endcomment -%}
+  {%- if product.metafields.reviews.rating.value != blank -%}
+    {%- assign rating_value = product.metafields.reviews.rating.value.rating | round: 1 -%}
+    {%- assign rating_scale = product.metafields.reviews.rating.value.scale_max | default: 5 -%}
+  {%- else -%}
+    {%- assign rating_value = 4.5 -%}
+    {%- assign rating_scale = 5 -%}
+  {%- endif -%}
+
+  {%- comment -%} Discount calculation {%- endcomment -%}
+  {%- assign has_discount = false -%}
+  {%- if card_compare_price and card_compare_price > card_price -%}
+    {%- assign has_discount = true -%}
+    {%- assign discount_diff = card_compare_price | minus: card_price | times: 100.0 -%}
+    {%- assign discount_percent = discount_diff | divided_by: card_compare_price | round -%}
+  {%- endif -%}
+
+  <a href="{{ card_url }}" class="product-card" aria-label="{{ card_title | escape }}">
+    <div class="product-card__image-container">
+      {%- if card_image != blank -%}
+        {{
+          card_image
+          | image_url: width: 600
+          | image_tag:
+            class: 'product-card__image',
+            widths: '240, 300, 400, 500, 600',
+            loading: 'lazy',
+            alt: card_title
+        }}
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag: 'product-card__placeholder-svg' }}
+      {%- endif -%}
+    </div>
+
+    <div class="product-card__info">
+      <h3 class="product-card__title">{{ card_title | escape }}</h3>
+
+      <div class="product-card__rating" aria-label="{{ rating_value }} out of {{ rating_scale }} stars">
+        <div class="product-card__stars" aria-hidden="true">
+          {%- for i in (1..5) -%}
+            {%- assign star_floor = i | minus: 1 -%}
+            {%- if rating_value >= i -%}
+              <!-- Full star -->
+              <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#FFC633"/>
+              </svg>
+            {%- elsif rating_value > star_floor -%}
+              <!-- Half star -->
+              <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="half-star-{{ product.id }}-{{ i }}">
+                    <stop offset="50%" stop-color="#FFC633"/>
+                    <stop offset="50%" stop-color="#E5E5E5"/>
+                  </linearGradient>
+                </defs>
+                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="url(#half-star-{{ product.id }}-{{ i }})"/>
+              </svg>
+            {%- else -%}
+              <!-- Empty star -->
+              <svg class="product-card__star" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 14.75L3.41625 17.685L4.482 11.4645L0 7.065L6.20813 6.1605L9 0.5L11.7919 6.1605L18 7.065L13.518 11.4645L14.5838 17.685L9 14.75Z" fill="#E5E5E5"/>
+              </svg>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <span class="product-card__rating-val">
+          {{ rating_value }}<span class="product-card__rating-scale">/{{ rating_scale }}</span>
+        </span>
+      </div>
+
+      <div class="product-card__price-row">
+        <span class="product-card__price">{{ card_price | money }}</span>
+
+        {%- if has_discount -%}
+          <span class="product-card__price-compare">{{ card_compare_price | money }}</span>
+          <span class="product-card__discount-badge">-{{ discount_percent }}%</span>
+        {%- endif -%}
+      </div>
+    </div>
+  </a>
+{%- endif -%}
